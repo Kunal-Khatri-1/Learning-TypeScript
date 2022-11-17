@@ -1,0 +1,5 @@
+tsc <fileName>.ts
+tsc <fileName>.ts -w
+
+// after puttin all the files in rootDir typeScript will transpile all the files in it
+tsc -w
