@@ -50,11 +50,24 @@ const doSomething4 = (): never => {
 };
 
 // unknown
+// awesome alternative to any type
 let vAny: any = 10;
 let vUnknown: unknown = 10;
 
 // any does not give error
 let s1: string = vAny;
+// this gives error
+// unknown is not assignable to type string
+// we can't assign unknown directly in other type
+// let s2: string = vUnknown;
+
+// any does not give error here
+console.log(vAny.foo());
+// unknown gives error
+// Property 'foo' does not exist on type 'unknown'
+// console.log(vUnknown.foo());
+
+// Type Assertion => convert one type to another
 
 let page2: any = "1";
 // this will make pageNumber2 of type string
